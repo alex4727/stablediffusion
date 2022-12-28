@@ -408,7 +408,7 @@ def fill(rank, opt):
         pass
     
     if opt.plms:
-        sampler = PLMSSampler(model, verbose=(rank==0))
+        sampler = PLMSSampler(model, verbose=False)
     elif opt.dpm:
         sampler = DPMSolverSampler(model)
     else:
